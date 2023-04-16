@@ -15,7 +15,7 @@ spec:
         app: greetings
     spec:
       containers:
-        - name: nginx
+        - name: greetings
           image: luizhesafa21/greetings:0.0.1
           ports:
             - containerPort: 8081
