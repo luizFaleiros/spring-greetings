@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greetings
+  labels:
+    app: greetings
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greetings
+  template:
+    metadata:
+      labels:
+        app: greetings
+    spec:
+      containers:
+        - name: nginx
+          image: luizhesafa21/greetings:0.0.1
+          ports:
+            - containerPort: 8081
